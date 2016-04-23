@@ -33,6 +33,21 @@ unsigned long Dimension::getWidth() const
     return m_width;
 }
 
+Dimension& Dimension::setHeight(unsigned long height)
+{
+    m_height = height;
+
+    return *this;
+}
+
+
+Dimension& Dimension::setWidth(unsigned long width)
+{
+    m_width = width;
+
+    return *this;
+}
+
 }
 
 }

@@ -11,8 +11,10 @@ set(PROJECT_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT
 set(TILESET_BUILD_SHARED TRUE CACHE BOOL "Build Tileset as shared library.")
 set(TILESET_BUILD_STATIC TRUE CACHE BOOL "Build Tileset as static library.")
 set(TILESET_BUILD_DOC TRUE CACHE BOOL "Build Tileset documentation.")
+set(TILESET_BUILD_TESTS TRUE CACHE BOOL "Build Tileset tests.")
 
 find_package(SFML)
+find_package(GTest)
 
 if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "RelWithDebInfo" CACHE STRING "Choose the type of build: Debug Release RelWithDebInfo MinSizeRel" FORCE)
@@ -37,6 +39,9 @@ set(DOC_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/doc" CACHE STRING "The directory th
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_subdirectory(src)
+if (TILESET_BUILD_TESTS)
+    add_subdirectory(test)
+endif ()
 if (TILESET_BUILD_DOC)
     add_subdirectory(doc)
 endif ()
