@@ -36,6 +36,8 @@ set(INCLUDE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/include" CACHE PATH "The direct
 set(LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib" CACHE STRING "The directory the libraries are installed in.")
 set(DOC_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/doc" CACHE STRING "The directory the documentation is installed in.")
 
+include_directories(${SFML_INCLUDE_DIR})
+include_directories(${GTEST_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_subdirectory(src)
