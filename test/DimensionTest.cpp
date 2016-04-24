@@ -5,6 +5,8 @@
  * \date 10/04/2016
  */
 
+#include <SFML/System/Vector2.hpp>
+
 #include <gtest/gtest.h>
 
 #include <zzbgames/tileset/Dimension.hpp>
@@ -33,6 +35,10 @@ TEST(DimensionTest, Constructor)
     Dimension dimension3(dimension2);
     ASSERT_EQ(1, dimension3.getWidth());
     ASSERT_EQ(2, dimension3.getHeight());
+
+    Dimension dimension4(sf::Vector2u(1, 2));
+    ASSERT_EQ(1, dimension4.getWidth());
+    ASSERT_EQ(2, dimension4.getHeight());
 }
 
 TEST(DimensionTest, Setters)

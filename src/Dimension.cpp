@@ -23,6 +23,12 @@ Dimension::Dimension(unsigned long width, unsigned long height)
 {
 }
 
+Dimension::Dimension(const sf::Vector2u& dimension)
+    : m_height(dimension.y),
+      m_width(dimension.x)
+{
+}
+
 unsigned long Dimension::getHeight() const
 {
     return m_height;

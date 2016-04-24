@@ -7,6 +7,8 @@
 #ifndef TILESET_DIMENSION_HPP
 #define TILESET_DIMENSION_HPP
 
+#include <SFML/System/Vector2.hpp>
+
 namespace zzbgames
 {
 
@@ -31,6 +33,13 @@ public:
      * \param height The specified height.
      */
     Dimension(unsigned long width, unsigned long height);
+
+    /**
+     * \brief Creates a new Dimension object from a SFML vector.
+     *
+     * \param dimension The specified dimension as a SFML vector.
+     */
+    Dimension(const sf::Vector2u& dimension);
 
     /**
      * \brief Creates a new Dimension object with the width and the height of the specified dimension.
