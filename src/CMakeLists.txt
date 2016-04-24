@@ -1,11 +1,15 @@
 set(TILESET_HEADERS
     Dimension.hpp
+    ImageComparator.hpp
     Insets.hpp
+    TileMapper.hpp
     Tileset.hpp)
 
 set(TILESET_SOURCES
     Dimension.cpp
+    ImageComparator.cpp
     Insets.cpp
+    TileMapper.cpp
     Tileset.cpp)
 
 if (TILESET_BUILD_SHARED)

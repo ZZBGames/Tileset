@@ -5,7 +5,7 @@
  * \date 10/04/2016
  */
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
 #include <zzbgames/tileset/Insets.hpp>
 

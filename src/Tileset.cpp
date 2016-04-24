@@ -61,6 +61,11 @@ unsigned long Tileset::getColumnCount() const
     return m_gridSize.getWidth();
 }
 
+const sf::Image& Tileset::getImage() const
+{
+    return m_image;
+}
+
 const Insets& Tileset::getMargin() const
 {
     return m_margin;

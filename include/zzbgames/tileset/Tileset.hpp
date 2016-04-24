@@ -73,6 +73,13 @@ public:
     unsigned long getColumnCount() const;
 
     /**
+     * \brief Returns the image used by this tileset.
+     *
+     * \returns The image of this tileset.
+     */
+    const sf::Image& getImage() const;
+
+    /**
      * \brief Returns the inner margin of this tileset.
      *
      * \return The inner margin of this tileset.
